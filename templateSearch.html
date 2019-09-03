@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+
+  <h1>{{ .PageData.Title}}</h1>
+  <p>{{ .PageData.News}}</p>
+
+<div>
+<form action="/agg">
+  <input type=hidden name="search" value="yes">
+  <input type="text" name="text" value="{{ .Query}}"/>
+  <input type="submit" value="Search">
+</form>
+</div>
+
+{{if .Query}}
+  <p>
+    {{range .Result}}
+      {{.}} <br/>
+    {{end}}
+  </p>
+{{end}}
+
+</body>
+</html>

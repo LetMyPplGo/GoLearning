@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+
+<h1>{{ .Title}}</h1>
+<p>{{ .News}}</p>
+
+<div>
+<form action="/search">
+  <input type=hidden name="search" value="yes">
+  <input type="text" name="text"/>
+  <input type="submit" value="Search">
+</form>
+</div>
+
+</body>
+</html>
